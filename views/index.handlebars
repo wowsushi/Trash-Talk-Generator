@@ -1,0 +1,54 @@
+<h1 class="text-center mb-5 mt-3">你想對誰說幹話？</h1>
+
+<form method="POST" action="/">
+  <div class="container">
+    <div class="row d-flex justify-content-md-center">
+      <div class="col col-lg-4 d-flex justify-content-center">
+        <div class="card mb-2 mx-2 " style="width: 20rem;">
+          <label for="engineer" style="margin: 0">
+            <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg" class="card-img-top" alt="工程師" style="height: 16rem">
+          </label>
+          <div class="card-footer text-muted text-center form-check">
+            <input class="form-check-input" id="engineer" name="job" type="radio" value="engineer" {{ engineer }}>
+            <label class="form-check-label" for="engineer">
+              工程師
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col-lg-4 d-flex justify-content-center">
+       <div class="card mb-2 mx-2" style="width: 20rem;">
+        <label for="designer" style="margin: 0">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg" class="card-img-top" alt="設計師" style="height: 16rem">
+        </label>
+          <div class="card-footer text-muted text-center form-check">
+            <input class="form-check-input" id="designer" name="job" type="radio" value="designer" {{ designer }}>
+            <label class="form-check-label" for="designer">
+              設計師
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col-lg-4 d-flex justify-content-center">
+        <div class="card mb-2 mx-2" style="width: 20rem;">
+          <label for="entrepreneur" style="margin: 0">
+            <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg" class="card-img-top" alt="創業家" style="height: 16rem">
+          </label>
+          <div class="card-footer text-muted text-center form-check">
+            <input class="form-check-input" id="entrepreneur" name="job" type="radio" value="entrepreneur" {{ entrepreneur }}>
+            <label class="form-check-label" for="entrepreneur">
+              創業家
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row d-flex justify-content-around mt-5">
+      <button class="btn btn-success" type="submit" style="height: fit-content">產生幹話</button>
+      <textarea rows="6" style="width: 80%">{{#if sentence }}{{sentence}}{{else}}點擊 "產生幹話" 產生幹話{{/if}}</textarea>
+    </div>
+  </div>
+</form>
